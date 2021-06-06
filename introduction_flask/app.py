@@ -16,7 +16,9 @@ def test() -> Dict:
 
 @app.route('/entry')
 def entry_page() -> str:
-    return render_template('entry.html')
+    return render_template('entry.html',
+                           the_title='テスト',
+                           )
 
 
 if __name__ == '__main__':
