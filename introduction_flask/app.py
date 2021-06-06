@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from typing import Dict
 
 app = Flask(__name__)
@@ -19,6 +19,12 @@ def entry_page() -> str:
     return render_template('entry.html',
                            the_title='テスト',
                            )
+
+
+@app.route('/result', methods=['POST'])
+def result_page() -> str:
+    username = request.form['username']
+    return 'あなたの名前は' + username + 'です。'
 
 
 if __name__ == '__main__':

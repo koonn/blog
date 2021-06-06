@@ -6,6 +6,14 @@
 </head>
 <body>
     <h1>{{ the_title }}</h1>
-    <p>test test test</p>
+
+    <form method="post" action="/result">
+        <p>
+            名前: <input type="text" name="username">
+        </p>
+        <p>
+            <input value="実行" type="submit">
+        </p>
+    </form>
 </body>
 </html>
